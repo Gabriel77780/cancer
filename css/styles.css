@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.tic-tac-toe-board {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  column-gap: 1px;
+  row-gap: 1px;
+}
+
+.tic-tac-toe-item {
+  background-color: rebeccapurple;
+  border: 1px;
+  border-color: red;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid green;
+  color: white;
+}
