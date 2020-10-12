@@ -8,44 +8,50 @@
   </head>
   <body>
     <div class="container">
-      <div class="tic-tac-toe-board">
-        <div id="0" class="tic-tac-toe-item">
-          0 x 0
-          <h1>X</h1>
+      <div class="board-info">
+        <div class="player-info">
+          <h4>Jugador 1</h4>
+          <img style="transform: scaleX(-1)" src="assets/bulbasaur-gif.gif" />
         </div>
-        <div id="1" class="tic-tac-toe-item">
-          0 x 1
-          <h1>O</h1>
+        <div class="player-info">
+          <h5>VS</h5>
         </div>
-        <div id="2" class="tic-tac-toe-item">
-          0 x 2
-          <h1>X</h1>
-        </div>
-        <div id="3" class="tic-tac-toe-item">
-          1 x 0
-          <h1>O</h1>
-        </div>
-        <div id="4" class="tic-tac-toe-item">
-          1 x 1
-          <h1>X</h1>
-        </div>
-        <div id="5" class="tic-tac-toe-item">
-          1 x 2
-          <h1>O</h1>
-        </div>
-        <div id="6" class="tic-tac-toe-item">
-          2 x 0
-          <h1>X</h1>
-        </div>
-        <div id="7" class="tic-tac-toe-item">
-          2 x 1
-          <h1>X</h1>
-        </div>
-        <div id="8" class="tic-tac-toe-item">
-          2 x 2
-          <h1>O</h1>
+        <div class="player-info">
+          <h4>Jugador 2</h4>
+          <img src="assets/charmander-gif.gif" />
         </div>
       </div>
+
+      <div class="tic-tac-toe-board">
+        <div class="tic-tac-toe-item">
+          <img id="0" src="assets/pokeball.gif" />
+        </div>
+        <div class="tic-tac-toe-item">
+          <img id="1" src="assets/pokeball.gif" />
+        </div>
+        <div class="tic-tac-toe-item">
+          <img id="2" src="assets/pokeball.gif" />
+        </div>
+        <div class="tic-tac-toe-item">
+          <img id="3" src="assets/pokeball.gif" />
+        </div>
+        <div class="tic-tac-toe-item">
+          <img id="4" src="assets/pokeball.gif" />
+        </div>
+        <div class="tic-tac-toe-item">
+          <img id="5" src="assets/pokeball.gif" />
+        </div>
+        <div class="tic-tac-toe-item">
+          <img id="6" src="assets/pokeball.gif" />
+        </div>
+        <div class="tic-tac-toe-item">
+          <img id="7" src="assets/pokeball.gif" />
+        </div>
+        <div class="tic-tac-toe-item">
+          <img id="8" src="assets/pokeball.gif" />
+        </div>
+      </div>
+      <h1 id="winner"></h1>
     </div>
 
     <script src="js/rules.js"></script>
