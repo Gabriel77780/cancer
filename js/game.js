@@ -1,4 +1,5 @@
 const winningConditions = [
+
   ["0", "1", "2"],
   ["3", "4", "5"],
   ["6", "7", "8"],
@@ -7,6 +8,7 @@ const winningConditions = [
   ["2", "5", "8"],
   ["0", "4", "8"],
   ["2", "4", "6"],
+
 ];
 
 let playerOne = {
@@ -20,7 +22,7 @@ let playerTwo = {
 }
 
 let currentPlayer = Math.floor(Math.random() * 2) == 1 ? playerOne : playerTwo;
-let totalTurn = 1;
+let currentTurn = 1;
 let endGame = false;
 
 document.querySelectorAll('.tic-tac-toe-item img').forEach(item => {
@@ -30,6 +32,7 @@ document.querySelectorAll('.tic-tac-toe-item img').forEach(item => {
 })
 
 function handleSelection(event) {
+
   if (!(playerOne.boardState.includes(event.target.id) ||
     playerTwo.boardState.includes(event.target.id)) && !endGame) {
 
@@ -38,12 +41,6 @@ function handleSelection(event) {
     nextPlayer();
 
   }
-}
-
-function nextPlayer() {
-
-  currentPlayer = currentPlayer === playerOne ? playerTwo : playerOne;
-  totalTurn = totalTurn + 1;
 
 }
 
@@ -56,7 +53,8 @@ function updatePlayerBoard(element) {
 
 function checkWin() {
 
-  if (totalTurn < 9) {
+  if (currentTurn <= 9) {
+
     for (i = 0; i < winningConditions.length; i++) {
 
       let a = currentPlayer.boardState.includes(winningConditions[i][0]);
@@ -64,13 +62,25 @@ function checkWin() {
       let c = currentPlayer.boardState.includes(winningConditions[i][2]);
 
       if (a && b && c) {
+
         document.getElementById("winner").innerHTML = currentPlayer === playerOne ? "Jugador 1" : "Jugador 2";
         endGame = true;
+
       }
 
     }
+
   } else {
+
     document.getElementById("winner").innerHTML = "Empate";
     endGame = true;
+
   }
+}
+
+function nextPlayer() {
+
+  currentPlayer = currentPlayer === playerOne ? playerTwo : playerOne;
+  currentTurn = currentTurn + 1;
+
 }
