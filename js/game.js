@@ -22,7 +22,7 @@ let playerTwo = {
 }
 
 let currentPlayer = Math.floor(Math.random() * 2) == 1 ? playerOne : playerTwo;
-let currentTurn = 1;
+let currentTurn = 0;
 let endGame = false;
 
 document.querySelectorAll('.tic-tac-toe-item img').forEach(item => {
@@ -37,8 +37,10 @@ function handleSelection(event) {
     playerTwo.boardState.includes(event.target.id)) && !endGame) {
 
     updatePlayerBoard(event.target);
-    nextPlayer();
+    
     checkWin();
+    nextTurn();
+    nextPlayer();
 
   }
 
@@ -67,20 +69,45 @@ function checkWin() {
         endGame = true;
 
       }
-
     }
 
-  } else {
-
-    document.getElementById("winner").innerHTML = "Empate";
-    endGame = true;
-
   }
+
 }
 
 function nextPlayer() {
 
   currentPlayer = currentPlayer === playerOne ? playerTwo : playerOne;
+
+}
+
+function nextTurn() {
+
   currentTurn = currentTurn + 1;
 
+  if(currentTurn == 10) {
+
+    document.getElementById("winner").innerHTML = "Empate";
+    endGame = true;
+
+  }
+
+}
+
+document.getElementById("restart-button").addEventListener("click", restartGame);
+
+function restartGame() {
+
+  playerOne.boardState = [];
+  playerTwo.boardState = [];
+  currentTurn = 1;
+  endGame = false;
+
+  currentPlayer = Math.floor(Math.random() * 2) == 1 ? playerOne : playerTwo;
+
+  document.querySelectorAll('.tic-tac-toe-item img').forEach(img => {
+    img.src = "assets/pokeball.gif";
+  });
+
+  document.getElementById("winner").innerHTML = "";
 }
