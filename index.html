@@ -1,61 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <div class="container">
 
-      <button id="restart-button">Reiniciar</button>
-      <div class="board-info">
-        <div class="player-info">
-          <h4>Jugador 1</h4>
-          <img style="transform: scaleX(-1)" src="assets/bulbasaur-gif.gif" />
-        </div>
-        <div class="player-info">
-          <h5>VS</h5>
-        </div>
-        <div class="player-info">
-          <h4>Jugador 2</h4>
-          <img src="assets/charmander-gif.gif" />
-        </div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pokémon Themed Tic Tac Toe</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="180x180" href="./assets/pokeball.png">
+</head>
 
-      <div class="tic-tac-toe-board">
-        <div class="tic-tac-toe-item">
-          <img id="0" src="assets/pokeball.gif" />
-        </div>
-        <div class="tic-tac-toe-item">
-          <img id="1" src="assets/pokeball.gif" />
-        </div>
-        <div class="tic-tac-toe-item">
-          <img id="2" src="assets/pokeball.gif" />
-        </div>
-        <div class="tic-tac-toe-item">
-          <img id="3" src="assets/pokeball.gif" />
-        </div>
-        <div class="tic-tac-toe-item">
-          <img id="4" src="assets/pokeball.gif" />
-        </div>
-        <div class="tic-tac-toe-item">
-          <img id="5" src="assets/pokeball.gif" />
-        </div>
-        <div class="tic-tac-toe-item">
-          <img id="6" src="assets/pokeball.gif" />
-        </div>
-        <div class="tic-tac-toe-item">
-          <img id="7" src="assets/pokeball.gif" />
-        </div>
-        <div class="tic-tac-toe-item">
-          <img id="8" src="assets/pokeball.gif" />
-        </div>
+<body>
+  <div class="container">
+
+    <button id="restart-button" class="restart-button">Reiniciar</button>
+    <div class="board-info">
+      <div class="player-info">
+        <h4>Jugador 1</h4>
+        <img style="transform: scaleX(-1)" src="assets/bulbasaur-gif.gif" />
       </div>
-      <h1 id="winner"></h1>
+      <div class="player-info">
+        <h5>VS</h5>
+      </div>
+      <div class="player-info">
+        <h4>Jugador 2</h4>
+        <img src="assets/charmander-gif.gif" />
+      </div>
     </div>
 
-    <script src="js/game.js"></script>
-  </body>
+    <div class="tic-tac-toe-board">
+      <div class="tic-tac-toe-item">
+        <img id="0" src="assets/pokeball.gif" />
+      </div>
+      <div class="tic-tac-toe-item">
+        <img id="1" src="assets/pokeball.gif" />
+      </div>
+      <div class="tic-tac-toe-item">
+        <img id="2" src="assets/pokeball.gif" />
+      </div>
+      <div class="tic-tac-toe-item">
+        <img id="3" src="assets/pokeball.gif" />
+      </div>
+      <div class="tic-tac-toe-item">
+        <img id="4" src="assets/pokeball.gif" />
+      </div>
+      <div class="tic-tac-toe-item">
+        <img id="5" src="assets/pokeball.gif" />
+      </div>
+      <div class="tic-tac-toe-item">
+        <img id="6" src="assets/pokeball.gif" />
+      </div>
+      <div class="tic-tac-toe-item">
+        <img id="7" src="assets/pokeball.gif" />
+      </div>
+      <div class="tic-tac-toe-item">
+        <img id="8" src="assets/pokeball.gif" />
+      </div>
+    </div>
+    <h1 id="winner"></h1>
+  </div>
+
+  <script src="js/game.js"></script>
+</body>
+
 </html>
