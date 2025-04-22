@@ -37,8 +37,8 @@ function handleSelection(event) {
     playerTwo.boardState.includes(event.target.id)) && !endGame) {
 
     updatePlayerBoard(event.target);
-    checkWin();
     nextPlayer();
+    checkWin();
 
   }
 
