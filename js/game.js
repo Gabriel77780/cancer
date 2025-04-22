@@ -12,12 +12,10 @@ const winningConditions = [
 ];
 
 let playerOne = {
-  boardState: [],
   icon: "assets/bulbasaur-gif.gif"
 }
 
 let playerTwo = {
-  boardState: [],
   icon: "assets/charmander-gif.gif"
 }
 
@@ -30,6 +28,16 @@ document.querySelectorAll('.tic-tac-toe-item img').forEach(item => {
     handleSelection(event);
   })
 })
+
+function initValues(){
+  currentPlayer = Math.floor(Math.random() * 2) == 1 ? playerOne : playerTwo;
+  currentTurn = 0;
+  endGame = false;
+
+  playerOne.boardState = [];
+  playerTwo.boardState = [];
+
+}
 
 function handleSelection(event) {
 
@@ -98,16 +106,17 @@ document.getElementById("restart-button").addEventListener("click", restartGame)
 
 function restartGame() {
 
-  playerOne.boardState = [];
-  playerTwo.boardState = [];
-  currentTurn = 1;
-  endGame = false;
-
-  currentPlayer = Math.floor(Math.random() * 2) == 1 ? playerOne : playerTwo;
+  initValues();
 
   document.querySelectorAll('.tic-tac-toe-item img').forEach(img => {
     img.src = "assets/pokeball.gif";
   });
 
+  cleanWinnerState();
+}
+
+function cleanWinnerState(){
   document.getElementById("winner").innerHTML = "";
 }
+
+initValues();
