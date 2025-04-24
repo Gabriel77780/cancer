@@ -63,7 +63,7 @@ function updatePlayerBoard(element) {
 
 function checkWin() {
 
-  if (currentTurn <= 9) {
+  if (currentTurn <= 8) {
 
     for (i = 0; i < winningConditions.length; i++) {
 
@@ -93,7 +93,7 @@ function nextTurn() {
 
   currentTurn = currentTurn + 1;
 
-  if(currentTurn == 10) {
+  if(currentTurn == 9 && !endGame) {
 
     document.getElementById("winner").innerHTML = "Empate";
     endGame = true;
