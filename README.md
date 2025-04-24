@@ -1,6 +1,6 @@
 # cancer
 
-Pokémon Tic Tac Toe made with Vanilla JS
+Pokémon Themed Tic Tac Toe made with Vanilla JS
 
 
 Game UI
